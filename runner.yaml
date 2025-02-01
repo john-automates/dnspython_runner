@@ -1,0 +1,17 @@
+runner:
+  name: DNS Analysis Tool
+  description: A tool that performs DNS analysis by resolving various DNS record types
+    (A, AAAA, MX, NS, TXT, SOA, CAA, CNAME, SRV) and executing reverse DNS lookups
+    for A records. It generates a text report with detailed logs and saves it to an
+    output file.
+  version: 1.0.0
+build:
+  memorysize: 256
+  commands: pip install dnspython
+webform:
+- name: domain
+  prompt: Enter the domain to analyze (default is google.com if left blank)
+  type: text
+launch:
+  type: python
+  command: python app.py {domain}
