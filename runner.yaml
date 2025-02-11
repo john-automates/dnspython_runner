@@ -1,0 +1,15 @@
+runner:
+  name: DNS Analysis Tool
+  description: A tool that performs DNS analysis including resolution of various DNS
+    record types and reverse DNS lookups for a given domain.
+  version: 1.0.0
+build:
+  memorysize: 128
+  commands: pip install dnspython
+webform:
+- name: domain
+  prompt: 'Enter the domain name to analyze:'
+  type: text
+launch:
+  type: python
+  command: python app.py ${domain}
