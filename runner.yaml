@@ -12,4 +12,4 @@ webform:
   type: text
 launch:
   type: python
-  command: python app.py ${domain}
+  command: python dns_report.py ${domain}
